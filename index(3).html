@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="ta" data-lang="ta">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="TP Poultry and Feeds – Premium Poultry & Feed Service in Tamil Nadu"/>
+<title>TP Poultry and Feeds | Premium Poultry & Feeds</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+/* ======================================================
+   DESIGN SYSTEM
+====================================================== */
+:root{
+  /* Core palette */
+  --ink:       #080f08;
+  --forest:    #0b3d1e;
+  --pine:      #14532d;
+  --green:     #166534;
+  --mid:       #15803d;
+  --sage:      #4ade80;
+  --pale:      #dcfce7;
+  --xpale:     #f0fdf4;
+
+  --amber:     #b45309;
+  --gold:      #d97706;
+  --sun:       #f59e0b;
+  --warm:      #fef3c7;
+  --xwarm:     #fffbeb;
+
+  --brown:     #78350f;
+  --earth:     #92400e;
+
+  --cream:     #fefcf6;
+  --paper:     #f7f3eb;
+  --linen:     #ede8dc;
+  --border:    #e2ddd4;
+  --stroke:    #d4cfC6;
+
+  --text:      #1a2b1a;
+  --body:      #3d4f3a;
+  --muted:     #6b7a68;
+  --ghost:     #9aaa98;
+  --white:     #ffffff;
+
+  /* Typography */
+  --serif:  'Cormorant Garamond','Noto Sans Tamil',Georgia,serif;
+  --sans:   'DM Sans','Noto Sans Tamil',system-ui,sans-serif;
+  --tamil:  'Noto Sans Tamil','DM Sans',sans-serif;
+
+  /* Spacing */
+  --sp-xs:  8px;  --sp-sm: 16px; --sp-md: 24px;
+  --sp-lg:  40px; --sp-xl: 64px; --sp-2xl:96px;
+
+  /* Radius */
+  --r-xs:4px; --r-sm:8px; --r-md:16px;
+  --r-lg:24px; --r-xl:36px; --r-full:9999px;
+
+  /* Shadows */
+  --s-xs:0 1px 6px rgba(8,15,8,.06);
+  --s-sm:0 4px 16px rgba(8,15,8,.08);
+  --s-md:0 8px 32px rgba(8,15,8,.10);
+  --s-lg:0 16px 56px rgba(8,15,8,.13);
+  --s-xl:0 28px 80px rgba(8,15,8,.18);
+  --s-green:0 8px 32px rgba(22,101,52,.28);
+  --s-gold:0 8px 28px rgba(217,119,6,.35);
+
+  /* Motion */
+  --ease:cubic-bezier(.4,0,.2,1);
+  --spring:cubic-bezier(.34,1.56,.64,1);
+  --t-fast:.2s; --t-base:.35s; --t-slow:.6s;
+}
+
+/* ======================================================
+   RESET
+====================================================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);color:var(--text);
+  background:var(--cream);overflow-x:hidden;
+  line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+ul,ol{list-style:none}
+button,input,textarea,select{font-family:inherit}
+button{cursor:pointer;border:none;background:none}
+
+/* ======================================================
+   GLOBAL TYPOGRAPHY
+====================================================== */
+h1,h2,h3,h4{
+  font-family:var(--serif);
+  line-height:1.15;color:var(--forest);
+  font-weight:700;letter-spacing:-.01em;
+}
+h1{font-size:clamp(2.8rem,6vw,5.5rem)}
+h2{font-size:clamp(2rem,4vw,3.4rem)}
+h3{font-size:clamp(1.3rem,2.5vw,1.8rem)}
+h4{font-size:1.1rem;font-family:var(--sans);font-weight:600}
+p{color:var(--body);line-height:1.8}
+
+/* ======================================================
+   UTILITIES
+====================================================== */
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.wrap-sm{max-width:860px;margin:0 auto;padding:0 28px}
+
+/* Section label */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--sans);font-size:.72rem;font-weight:600;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:14px;
+}
+.eyebrow::before{
+  content:'';width:28px;height:1.5px;background:currentColor;
+  flex-shrink:0;border-radius:2px;
+}
+
+/* Divider */
+.divider{width:48px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--sun));margin:20px 0}
+.divider.center{margin:20px auto}
+
+/* Badge pill */
+.badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  color:rgba(255,255,255,.9);font-size:.75rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:6px 16px;border-radius:var(--r-full);
+  backdrop-filter:blur(8px);
+}
+.badge .dot{
+  width:7px;height:7px;background:var(--sun);border-radius:50%;
+  animation:dotPulse 2s ease-in-out infinite;
+  flex-shrink:0;
+}
+@keyframes dotPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.7}}
+
+/* ======================================================
+   SCROLL REVEAL
+====================================================== */
+.sr{opacity:0;transform:translateY(44px);
+  transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.sr.left{transform:translateX(-44px)}
+.sr.right{transform:translateX(44px)}
+.sr.up{opacity:1;transform:none}
+.sr.d1{transition-delay:.1s}.sr.d2{transition-delay:.2s}
+.sr.d3{transition-delay:.3s}.sr.d4{transition-delay:.4s}
+.sr.d5{transition-delay:.5s}.sr.d6{transition-delay:.6s}
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 30px;border-radius:var(--r-full);
+  font-family:var(--sans);font-size:.95rem;font-weight:600;
+  transition:all var(--t-base) var(--ease);
+  cursor:pointer;white-space:nowrap;position:relative;overflow:hidden;
+}
+.btn::after{
+  content:'';position:absolute;inset:0;
+  background:rgba(255,255,255,.0);
+  transition:background var(--t-fast);
+}
+.btn:hover::after{background:rgba(255,255,255,.12)}
+.btn:active{transform:scale(.98)}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--green),var(--pine));
+  color:#fff;box-shadow:var(--s-green);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(22,101,52,.4)}
+
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold),var(--sun));
+  color:#fff;box-shadow:var(--s-gold);
+}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(217,119,6,.45)}
+
+.btn-ghost-white{
+  background:rgba(255,255,255,.1);color:#fff;
+  border:1.5px solid rgba(255,255,255,.4);
+  backdrop-filter:blur(10px);
+}
+.btn-ghost-white:hover{background:rgba(255,255,255,.2);transform:translateY(-3px);border-color:rgba(255,255,255,.7)}
+
+.btn-outline{
+  background:transparent;color:var(--pine);
+  border:1.5px solid var(--stroke);
+}
+.btn-outline:hover{background:var(--xpale);border-color:var(--green);color:var(--green);transform:translateY(-2px)}
+
+.btn-wa{
+  background:linear-gradient(135deg,#25d366,#20ba59);
+  color:#fff;box-shadow:0 8px 28px rgba(37,211,102,.38);
+}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(37,211,102,.5)}
+
+/* Icon button */
+.icon-btn{
+  width:44px;height:44px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:all var(--t-base) var(--spring);
+}
+
+/* ======================================================
+   MARQUEE TICKER
+====================================================== */
+.ticker-wrap{
+  background:linear-gradient(90deg,var(--forest),var(--pine),var(--forest));
+  padding:13px 0;overflow:hidden;
+}
+.ticker-track{
+  display:flex;gap:0;white-space:nowrap;
+  animation:ticker 28s linear infinite;
+}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.7);padding:0 32px;flex-shrink:0;
+}
+.ticker-item span{color:var(--sun)}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ======================================================
+   NAVBAR
+====================================================== */
+#navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:0;
+  transition:all var(--t-base) var(--ease);
+}
+#navbar.scrolled{
+  background:rgba(8,14,8,.78);
+  backdrop-filter:blur(22px) saturate(180%);
+  -webkit-backdrop-filter:blur(22px);
+  box-shadow:0 1px 0 rgba(255,255,255,.06),0 4px 30px rgba(0,0,0,.3);
+}
+#navbar.light{
+  background:rgba(255,252,246,.95);
+  backdrop-filter:blur(20px);
+  box-shadow:0 1px 0 var(--border),0 4px 24px rgba(8,15,8,.06);
+}
+
+.nav-wrap{
+  max-width:1200px;margin:0 auto;padding:0 28px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:76px;transition:height var(--t-base) var(--ease);
+}
+#navbar.scrolled .nav-wrap,
+#navbar.light .nav-wrap{height:68px}
+
+/* Logo */
+.nav-logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo-mark{
+  width:44px;height:44px;border-radius:12px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--gold),var(--amber));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;
+  box-shadow:0 4px 16px rgba(217,119,6,.4);
+  transition:transform var(--t-base) var(--spring);
+}
+.nav-logo:hover .logo-mark{transform:rotate(-6deg) scale(1.08)}
+.logo-copy{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-size:.97rem;font-weight:700;color:#fff;transition:color var(--t-base)}
+.logo-tagline{font-size:.65rem;font-weight:500;color:rgba(255,255,255,.5);letter-spacing:.04em}
+#navbar.light .logo-name{color:var(--forest)}
+#navbar.light .logo-tagline{color:var(--muted)}
+
+/* Nav links */
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{
+  font-size:.865rem;font-weight:500;
+  color:rgba(255,255,255,.75);padding:8px 14px;border-radius:10px;
+  transition:all var(--t-base) var(--ease);letter-spacing:.01em;
+}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.1)}
+#navbar.light .nav-links a{color:var(--body)}
+#navbar.light .nav-links a:hover{color:var(--green);background:var(--xpale)}
+
+.nav-right{display:flex;align-items:center;gap:10px}
+
+/* Lang toggle */
+.lang-toggle{
+  display:flex;align-items:center;gap:7px;
+  padding:8px 16px;border-radius:var(--r-full);
+  font-size:.78rem;font-weight:700;letter-spacing:.06em;
+  background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);
+  border:1.5px solid rgba(255,255,255,.2);
+  transition:all var(--t-base) var(--ease);
+}
+.lang-toggle:hover{background:rgba(255,255,255,.2);color:#fff}
+#navbar.light .lang-toggle{background:var(--xpale);color:var(--green);border-color:var(--pale)}
+#navbar.light .lang-toggle:hover{background:var(--pale)}
+
+.cta-nav{
+  padding:9px 22px;font-size:.85rem;
+  display:flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--gold),var(--sun));
+  color:#fff;border-radius:var(--r-full);font-weight:600;
+  box-shadow:var(--s-gold);
+  transition:all var(--t-base) var(--ease);
+}
+.cta-nav:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(217,119,6,.45)}
+
+/* Hamburger */
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px}
+.hamburger span{
+  display:block;width:22px;height:2px;
+  background:rgba(255,255,255,.8);border-radius:2px;
+  transition:all var(--t-base) var(--ease);
+}
+#navbar.light .hamburger span{background:var(--forest)}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Mobile menu */
+.mobile-menu{
+  display:none;position:fixed;inset:0;z-index:999;
+  background:rgba(8,14,8,.97);backdrop-filter:blur(16px);
+  flex-direction:column;justify-content:center;align-items:center;gap:6px;
+  padding:40px;
+}
+.mobile-menu.open{display:flex;animation:menuFade .3s var(--ease)}
+@keyframes menuFade{from{opacity:0}to{opacity:1}}
+.mobile-menu a{
+  font-family:var(--serif);font-size:2rem;font-weight:600;
+  color:rgba(255,255,255,.8);padding:12px;
+  transition:all var(--t-base) var(--ease);text-align:center;
+}
+.mobile-menu a:hover{color:var(--sun)}
+.mobile-menu-close{
+  position:absolute;top:28px;right:28px;
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;
+}
+
+/* ======================================================
+   HERO
+====================================================== */
+.hero{
+  position:relative;min-height:100svh;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:
+    linear-gradient(180deg,rgba(4,12,4,.72) 0%,rgba(8,24,8,.55) 40%,rgba(4,15,4,.85) 100%),
+    url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=1800&q=80') center/cover no-repeat;
+}
+/* Grain overlay */
+.hero-grain{
+  position:absolute;inset:0;z-index:1;opacity:.35;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.15'/%3E%3C/svg%3E");
+}
+/* Radial warm glow */
+.hero-glow{
+  position:absolute;bottom:-10%;right:5%;z-index:1;
+  width:55vw;height:55vw;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(245,158,11,.14) 0%,transparent 68%);
+}
+
+.hero-inner{
+  position:relative;z-index:2;flex:1;
+  display:flex;align-items:center;
+  max-width:1200px;margin:0 auto;width:100%;
+  padding:100px 28px 80px;
+}
+.hero-content{max-width:720px}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.35);
+  color:var(--sun);font-size:.75rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;padding:7px 18px;border-radius:var(--r-full);
+  margin-bottom:28px;backdrop-filter:blur(8px);
+  animation:heroUp 1s .2s both;
+}
+
+.hero h1{
+  font-size:clamp(3rem,7vw,5.8rem);font-weight:700;
+  color:#fff;margin-bottom:10px;line-height:1;
+  animation:heroUp 1s .4s both;letter-spacing:-.02em;
+}
+.hero h1 em{color:var(--sun);font-style:italic;display:block}
+
+.hero-sub{
+  font-family:var(--sans);font-size:clamp(1rem,2vw,1.2rem);
+  color:rgba(255,255,255,.72);margin:20px 0 40px;
+  max-width:520px;line-height:1.7;
+  animation:heroUp 1s .6s both;
+}
+
+.hero-ctas{
+  display:flex;flex-wrap:wrap;gap:14px;
+  animation:heroUp 1s .8s both;
+}
+.hero-ctas .btn{font-size:1rem;padding:16px 32px}
+
+/* Hero stats bar */
+.hero-stats-bar{
+  position:relative;z-index:2;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding:0 0 0;
+}
+.hero-stats-inner{
+  max-width:1200px;margin:0 auto;padding:0 28px;
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.hstat{
+  padding:28px 24px;display:flex;flex-direction:column;gap:4px;
+  border-right:1px solid rgba(255,255,255,.07);
+  position:relative;
+}
+.hstat:last-child{border-right:none}
+.hstat-num{
+  font-family:var(--serif);font-size:2.4rem;font-weight:700;
+  color:#fff;line-height:1;letter-spacing:-.02em;
+}
+.hstat-num span{color:var(--sun)}
+.hstat-label{font-size:.78rem;color:rgba(255,255,255,.55);font-weight:500;letter-spacing:.04em}
+
+@keyframes heroUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+
+/* Wave bottom */
+.hero-bottom-wave{position:relative;z-index:2;line-height:0;margin-top:-2px}
+.hero-bottom-wave svg{width:100%;height:auto;display:block}
+
+/* ======================================================
+   ABOUT
+====================================================== */
+.about-sec{background:var(--white);padding:110px 0 100px;overflow:hidden}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:90px;align-items:center;
+}
+
+.about-img-col{position:relative}
+.about-img-main{
+  border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--s-xl);
+  aspect-ratio:4/5;
+  position:relative;
+}
+.about-img-main img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 1.2s var(--ease);
+}
+.about-img-main:hover img{transform:scale(1.04)}
+
+/* Floating card on image */
+.about-float-card{
+  position:absolute;bottom:-24px;right:-24px;
+  background:#fff;border-radius:var(--r-md);
+  padding:20px 24px;box-shadow:var(--s-lg);
+  border:1px solid var(--border);max-width:200px;
+  z-index:2;
+}
+.afc-icon{font-size:2rem;margin-bottom:8px}
+.afc-num{
+  font-family:var(--serif);font-size:2rem;font-weight:700;
+  color:var(--forest);line-height:1;
+}
+.afc-label{font-size:.78rem;color:var(--muted);margin-top:3px}
+
+.about-text-col{}
+.about-pull{
+  font-family:var(--serif);font-size:1.45rem;font-weight:600;
+  color:var(--forest);line-height:1.5;
+  padding-left:22px;border-left:3px solid var(--sun);
+  margin:28px 0 24px;font-style:italic;
+}
+.about-body-p{font-size:1rem;color:var(--body);margin-bottom:18px;line-height:1.85}
+.about-chips{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 36px}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--xpale);color:var(--pine);
+  border:1px solid var(--pale);border-radius:var(--r-full);
+  font-size:.8rem;font-weight:600;padding:7px 15px;
+  transition:all var(--t-base) var(--ease);
+}
+.chip:hover{background:var(--pale);transform:translateY(-2px)}
+.chip i{font-size:.75rem;color:var(--mid)}
+
+/* About stats mini */
+.about-stats{
+  display:flex;gap:0;margin-top:40px;
+  border-radius:var(--r-lg);overflow:hidden;
+  border:1px solid var(--border);
+}
+.ast{
+  flex:1;padding:20px;text-align:center;
+  border-right:1px solid var(--border);transition:background var(--t-base);
+}
+.ast:last-child{border-right:none}
+.ast:hover{background:var(--xpale)}
+.ast-n{
+  font-family:var(--serif);font-size:1.8rem;font-weight:700;
+  color:var(--forest);line-height:1;
+}
+.ast-n em{color:var(--gold);font-style:normal}
+.ast-l{font-size:.72rem;color:var(--muted);margin-top:4px;font-weight:500}
+
+/* ======================================================
+   SERVICES
+====================================================== */
+.services-sec{
+  padding:110px 0;
+  background:var(--paper);
+  position:relative;overflow:hidden;
+}
+.services-sec::before{
+  content:'';position:absolute;
+  top:-120px;left:-120px;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(21,128,61,.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.services-sec::after{
+  content:'';position:absolute;
+  bottom:-80px;right:-80px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(217,119,6,.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+.sec-header{margin-bottom:60px}
+.sec-header.center{text-align:center}
+.sec-header.center .divider{margin:14px auto 0}
+
+.svc-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.svc-card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  padding:32px 28px;
+  position:relative;overflow:hidden;
+  transition:all var(--t-base) var(--ease);
+  cursor:default;group:true;
+}
+.svc-card::before{
+  content:'';position:absolute;
+  inset:0;border-radius:inherit;
+  background:linear-gradient(135deg,var(--xpale),transparent 60%);
+  opacity:0;transition:opacity var(--t-base);
+}
+.svc-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--s-lg);
+  border-color:rgba(21,128,61,.2);
+}
+.svc-card:hover::before{opacity:1}
+
+.svc-icon-wrap{
+  width:60px;height:60px;border-radius:16px;
+  background:var(--xpale);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.7rem;margin-bottom:20px;
+  transition:all var(--t-base) var(--spring);
+  position:relative;z-index:1;
+}
+.svc-card:hover .svc-icon-wrap{
+  background:var(--green);transform:scale(1.12) rotate(-6deg);
+}
+.svc-card h3{
+  font-family:var(--sans);font-size:1.05rem;font-weight:700;
+  color:var(--forest);margin-bottom:10px;
+  position:relative;z-index:1;
+}
+.svc-card p{
+  font-size:.875rem;color:var(--muted);line-height:1.65;
+  position:relative;z-index:1;
+}
+.svc-card-cta{
+  position:relative;z-index:1;margin-top:20px;
+  display:flex;align-items:center;gap:6px;
+  font-size:.8rem;font-weight:600;color:var(--green);
+  opacity:0;transform:translateX(-8px);
+  transition:all var(--t-base) var(--ease);
+}
+.svc-card:hover .svc-card-cta{opacity:1;transform:none}
+
+/* Special featured cards */
+.svc-card.dark{
+  background:linear-gradient(150deg,var(--forest) 0%,var(--pine) 100%);
+  border-color:transparent;
+}
+.svc-card.dark::before{background:linear-gradient(135deg,rgba(255,255,255,.08),transparent)}
+.svc-card.dark .svc-icon-wrap{background:rgba(255,255,255,.1)}
+.svc-card.dark:hover .svc-icon-wrap{background:var(--gold)}
+.svc-card.dark h3{color:#fff}
+.svc-card.dark p{color:rgba(255,255,255,.65)}
+.svc-card.dark .svc-card-cta{color:var(--sun)}
+
+.svc-card.gold{
+  background:linear-gradient(150deg,var(--amber) 0%,var(--gold) 100%);
+  border-color:transparent;
+}
+.svc-card.gold::before{background:linear-gradient(135deg,rgba(255,255,255,.12),transparent)}
+.svc-card.gold .svc-icon-wrap{background:rgba(255,255,255,.18)}
+.svc-card.gold:hover .svc-icon-wrap{background:var(--forest)}
+.svc-card.gold h3{color:#fff}
+.svc-card.gold p{color:rgba(255,255,255,.8)}
+.svc-card.gold .svc-card-cta{color:rgba(255,255,255,.9)}
+
+/* ======================================================
+   PRODUCTS
+====================================================== */
+.products-sec{
+  padding:110px 0;
+  background:var(--white);
+}
+
+.prod-filter{
+  display:flex;flex-wrap:wrap;gap:10px;
+  justify-content:center;margin-bottom:48px;
+}
+.pf-btn{
+  padding:9px 22px;border-radius:var(--r-full);
+  font-size:.82rem;font-weight:600;
+  background:var(--paper);color:var(--muted);
+  border:1px solid var(--border);
+  transition:all var(--t-base) var(--ease);cursor:pointer;
+}
+.pf-btn.active,.pf-btn:hover{background:var(--green);color:#fff;border-color:transparent;box-shadow:var(--s-green)}
+
+.prod-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.prod-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--r-lg);overflow:hidden;
+  transition:all var(--t-base) var(--ease);
+  cursor:pointer;
+}
+.prod-card:hover{transform:translateY(-7px);box-shadow:var(--s-lg);border-color:transparent}
+
+.prod-thumb{
+  position:relative;overflow:hidden;
+  height:200px;background:var(--paper);
+  display:flex;align-items:center;justify-content:center;
+}
+.prod-thumb img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .7s var(--ease);
+}
+.prod-card:hover .prod-thumb img{transform:scale(1.08)}
+.prod-thumb-emoji{
+  font-size:5.5rem;
+  transition:transform .5s var(--ease-spring);
+  user-select:none;
+}
+.prod-card:hover .prod-thumb-emoji{transform:scale(1.12) rotate(-8deg)}
+
+.prod-badge{
+  position:absolute;top:12px;left:12px;z-index:2;
+  padding:4px 12px;border-radius:var(--r-full);
+  font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+}
+.pb-fresh{background:var(--pale);color:var(--green)}
+.pb-special{background:var(--warm);color:var(--amber)}
+.pb-premium{background:rgba(8,15,8,.85);color:rgba(255,255,255,.9)}
+
+.prod-body{padding:20px}
+.prod-body h3{
+  font-family:var(--sans);font-size:.97rem;font-weight:700;
+  color:var(--forest);margin-bottom:6px;
+}
+.prod-body p{font-size:.82rem;color:var(--muted);line-height:1.55;margin-bottom:16px}
+.prod-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:14px;border-top:1px solid var(--border);
+}
+.prod-price-tag{
+  font-size:.75rem;color:var(--ghost);font-style:italic;
+}
+.enquire-btn{
+  display:flex;align-items:center;gap:6px;
+  padding:8px 16px;border-radius:var(--r-full);
+  font-size:.78rem;font-weight:600;
+  background:#25d366;color:#fff;
+  transition:all var(--t-base) var(--spring);
+  box-shadow:0 3px 10px rgba(37,211,102,.3);
+}
+.enquire-btn:hover{transform:scale(1.08);box-shadow:0 6px 18px rgba(37,211,102,.45)}
+
+/* ======================================================
+   WHY US
+====================================================== */
+.why-sec{
+  padding:110px 0;
+  background:var(--paper);
+  position:relative;overflow:hidden;
+}
+
+.why-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+
+.why-visual-col{position:relative}
+.why-img-card{
+  border-radius:var(--r-xl);overflow:hidden;
+  box-shadow:var(--s-xl);
+  aspect-ratio:5/6;position:relative;
+}
+.why-img-card img{
+  width:100%;height:100%;object-fit:cover;
+  filter:saturate(1.15);
+}
+.why-img-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(8,24,8,.75) 0%,transparent 60%);
+}
+.why-img-text{
+  position:absolute;bottom:28px;left:28px;right:28px;
+  color:#fff;
+}
+.wit-kicker{
+  font-size:.7rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--sun);margin-bottom:6px;
+}
+.wit-title{
+  font-family:var(--serif);font-size:1.6rem;font-weight:700;
+  line-height:1.2;color:#fff;
+}
+
+.why-float-stat{
+  position:absolute;top:-20px;right:-20px;
+  background:#fff;border-radius:var(--r-lg);
+  padding:18px 22px;box-shadow:var(--s-lg);
+  border:1px solid var(--border);
+  display:flex;align-items:center;gap:14px;
+  min-width:180px;
+}
+.wfs-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--warm);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;flex-shrink:0;
+}
+.wfs-num{
+  font-family:var(--serif);font-size:1.5rem;font-weight:700;
+  color:var(--forest);line-height:1;
+}
+.wfs-label{font-size:.7rem;color:var(--muted);margin-top:2px}
+
+.why-list{
+  display:flex;flex-direction:column;gap:4px;
+}
+.why-row{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:20px;border-radius:var(--r-md);
+  border:1px solid transparent;
+  transition:all var(--t-base) var(--ease);
+}
+.why-row:hover{
+  background:var(--white);
+  border-color:var(--border);
+  box-shadow:var(--s-sm);
+  transform:translateX(8px);
+}
+.why-row-icon{
+  width:48px;height:48px;min-width:48px;
+  border-radius:14px;background:var(--xpale);
+  color:var(--green);font-size:1.1rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:all var(--t-base) var(--ease);
+}
+.why-row:hover .why-row-icon{background:var(--green);color:#fff}
+.why-row-text h4{
+  font-family:var(--sans);font-size:.97rem;font-weight:700;
+  color:var(--forest);margin-bottom:4px;
+}
+.why-row-text p{font-size:.855rem;color:var(--muted);line-height:1.6}
+
+/* ======================================================
+   TESTIMONIALS
+====================================================== */
+.testi-sec{
+  padding:110px 0;
+  background:linear-gradient(160deg,var(--forest) 0%,var(--pine) 100%);
+  position:relative;overflow:hidden;
+}
+.testi-sec::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,255,255,.05)'/%3E%3C/svg%3E");
+  pointer-events:none;
+}
+.testi-sec::after{
+  content:'';position:absolute;
+  top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(245,158,11,.1),transparent 70%);
+  pointer-events:none;
+}
+.testi-sec .eyebrow{color:var(--sun)}
+.testi-sec h2{color:#fff}
+
+.testi-slider-wrap{
+  position:relative;overflow:hidden;margin-top:52px;
+}
+.testi-track{
+  display:flex;gap:24px;
+  transition:transform .5s var(--ease);
+}
+.testi-card{
+  flex:0 0 calc((100% - 48px)/3);min-width:0;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--r-xl);padding:36px;
+  transition:all var(--t-base) var(--ease);
+  backdrop-filter:blur(6px);
+}
+.testi-card:hover{
+  background:rgba(255,255,255,.12);
+  transform:translateY(-6px);
+  border-color:rgba(245,158,11,.3);
+}
+.testi-stars{display:flex;gap:3px;margin-bottom:18px}
+.testi-stars i{color:var(--sun);font-size:.85rem}
+.testi-text{
+  font-family:var(--serif);font-size:1.15rem;font-style:italic;
+  color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:24px;
+}
+.testi-author{display:flex;align-items:center;gap:13px}
+.testi-av{
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--amber));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;font-weight:700;color:#fff;font-family:var(--serif);
+  flex-shrink:0;
+}
+.testi-name{font-size:.9rem;font-weight:600;color:#fff}
+.testi-loc{font-size:.75rem;color:rgba(255,255,255,.5);margin-top:1px}
+
+.testi-controls{
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  margin-top:42px;
+}
+.testi-arrow{
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  color:rgba(255,255,255,.8);font-size:.9rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:all var(--t-base) var(--ease);cursor:pointer;
+}
+.testi-arrow:hover{background:var(--gold);border-color:transparent;color:#fff;transform:scale(1.1)}
+.testi-dots{display:flex;gap:8px;align-items:center}
+.testi-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:rgba(255,255,255,.25);
+  transition:all var(--t-base) var(--ease);cursor:pointer;
+}
+.testi-dot.active{background:var(--sun);width:22px;border-radius:4px}
+
+/* ======================================================
+   CONTACT
+====================================================== */
+.contact-sec{
+  padding:110px 0 100px;
+  background:var(--white);
+}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1.15fr;
+  gap:60px;align-items:start;
+}
+
+/* Info side */
+.contact-info-card{
+  border-radius:var(--r-xl);overflow:hidden;
+  box-shadow:var(--s-lg);
+}
+.cic-header{
+  background:linear-gradient(135deg,var(--forest),var(--pine));
+  padding:36px;color:#fff;position:relative;overflow:hidden;
+}
+.cic-header::after{
+  content:'🐓';font-size:6rem;
+  position:absolute;right:-10px;bottom:-10px;opacity:.12;
+}
+.cic-header h3{
+  font-family:var(--serif);font-size:1.8rem;font-weight:700;
+  color:#fff;margin-bottom:8px;
+}
+.cic-header p{font-size:.9rem;color:rgba(255,255,255,.7);max-width:280px}
+.cic-body{background:#fff;padding:28px}
+
+.cinfo-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 0;border-bottom:1px solid var(--border);
+}
+.cinfo-item:last-of-type{border-bottom:none;padding-bottom:0}
+.ci-icon-wrap{
+  width:42px;height:42px;min-width:42px;border-radius:12px;
+  background:var(--xpale);color:var(--green);
+  display:flex;align-items:center;justify-content:center;font-size:1rem;
+  flex-shrink:0;
+}
+.ci-label{
+  font-size:.7rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ghost);margin-bottom:3px;
+}
+.ci-value{font-size:.93rem;color:var(--text);font-weight:500}
+.ci-value a{color:var(--green);transition:color var(--t-fast)}
+.ci-value a:hover{color:var(--forest)}
+
+.cic-wa-btn{
+  display:flex;align-items:center;justify-content:center;gap:11px;
+  width:100%;padding:16px;border-radius:var(--r-md);margin-top:20px;
+  background:linear-gradient(135deg,#25d366,#1db954);color:#fff;
+  font-size:.97rem;font-weight:700;
+  box-shadow:0 6px 24px rgba(37,211,102,.35);
+  transition:all var(--t-base) var(--ease);
+}
+.cic-wa-btn i{font-size:1.3rem}
+.cic-wa-btn:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(37,211,102,.48)}
+
+/* Form card */
+.form-card{
+  background:var(--white);border-radius:var(--r-xl);
+  border:1px solid var(--border);padding:44px;
+  box-shadow:var(--s-md);
+}
+.form-card-title{
+  font-family:var(--serif);font-size:2rem;font-weight:700;
+  color:var(--forest);margin-bottom:6px;
+}
+.form-card-sub{font-size:.9rem;color:var(--muted);margin-bottom:32px}
+
+.fg{margin-bottom:20px}
+.fg label{
+  display:block;font-size:.78rem;font-weight:700;
+  color:var(--body);margin-bottom:7px;letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.fg input,.fg select,.fg textarea{
+  width:100%;padding:13px 16px;
+  border:1.5px solid var(--border);border-radius:var(--r-md);
+  font-size:.93rem;color:var(--text);
+  background:var(--cream);outline:none;
+  transition:all var(--t-base) var(--ease);resize:vertical;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{
+  border-color:var(--green);background:var(--white);
+  box-shadow:0 0 0 4px rgba(22,101,52,.1);
+}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-submit{
+  width:100%;padding:16px;border-radius:var(--r-full);
+  background:linear-gradient(135deg,var(--green),var(--pine));color:#fff;
+  font-size:1rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  box-shadow:var(--s-green);transition:all var(--t-base) var(--ease);
+}
+.form-submit:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(22,101,52,.42)}
+.form-success-msg{
+  display:none;align-items:center;gap:10px;
+  background:var(--xpale);border:1px solid var(--pale);
+  color:var(--green);border-radius:var(--r-md);
+  padding:14px 18px;margin-top:16px;
+  font-size:.9rem;font-weight:600;
+}
+.form-success-msg.show{display:flex;animation:slideUp .4s var(--ease)}
+@keyframes slideUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+.footer{
+  background:var(--ink);
+  color:rgba(255,255,255,.65);
+}
+.footer-top{
+  padding:72px 0 56px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.footer-grid{
+  display:grid;grid-template-columns:2.2fr 1fr 1fr 1.3fr;
+  gap:52px;
+}
+.f-brand-logo{
+  display:flex;align-items:center;gap:12px;margin-bottom:18px;
+}
+.f-brand-logo .logo-mark{width:46px;height:46px;font-size:1.4rem;border-radius:13px}
+.f-brand-name{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:#fff}
+.f-brand-tagline{font-size:.68rem;color:rgba(255,255,255,.4)}
+.f-about{font-size:.87rem;line-height:1.8;max-width:250px;margin-bottom:24px}
+.socials{display:flex;gap:10px}
+.social-link{
+  width:40px;height:40px;border-radius:11px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.1);
+  color:rgba(255,255,255,.65);font-size:.9rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:all var(--t-base) var(--ease);
+}
+.social-link:hover{background:var(--gold);border-color:transparent;color:#fff;transform:translateY(-3px)}
+
+.f-col h5{
+  font-family:var(--sans);font-size:.72rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.9);margin-bottom:20px;
+}
+.f-col ul{display:flex;flex-direction:column;gap:10px}
+.f-col ul li a{
+  font-size:.86rem;color:rgba(255,255,255,.5);
+  transition:all var(--t-base) var(--ease);
+}
+.f-col ul li a:hover{color:var(--sun);padding-left:5px}
+.f-contact-item{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:.86rem;color:rgba(255,255,255,.5);margin-bottom:12px;
+}
+.f-contact-item i{color:var(--sun);margin-top:3px;min-width:14px}
+
+.footer-bottom{
+  padding:20px 0;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.footer-bottom p{font-size:.79rem;color:rgba(255,255,255,.28)}
+.footer-bottom a{color:rgba(255,255,255,.35);transition:color var(--t-fast)}
+.footer-bottom a:hover{color:var(--sun)}
+
+/* ======================================================
+   FLOATING WHATSAPP
+====================================================== */
+.wa-fab{
+  position:fixed;bottom:30px;right:30px;z-index:900;
+  width:62px;height:62px;border-radius:50%;
+  background:linear-gradient(135deg,#25d366,#20ba59);
+  color:#fff;font-size:1.9rem;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 28px rgba(37,211,102,.6);
+  transition:all var(--t-base) var(--spring);
+}
+.wa-fab:hover{transform:scale(1.12) rotate(-8deg);box-shadow:0 10px 38px rgba(37,211,102,.7)}
+.wa-fab-ring{
+  position:absolute;inset:-6px;border-radius:50%;
+  border:2px solid rgba(37,211,102,.4);
+  animation:fabRing 2.5s ease-out infinite;
+}
+@keyframes fabRing{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.5);opacity:0}}
+.wa-fab-tip{
+  position:absolute;right:72px;bottom:50%;
+  transform:translateY(50%);
+  background:var(--ink);color:#fff;
+  border-radius:10px;padding:8px 14px;
+  font-size:.78rem;font-weight:600;white-space:nowrap;
+  opacity:0;pointer-events:none;
+  transition:opacity var(--t-base);box-shadow:var(--s-md);
+}
+.wa-fab-tip::after{
+  content:'';position:absolute;right:-6px;top:50%;
+  transform:translateY(-50%);
+  border:6px solid transparent;border-right:none;
+  border-left-color:var(--ink);
+}
+.wa-fab:hover .wa-fab-tip{opacity:1}
+
+/* Back to top */
+.btt{
+  position:fixed;bottom:104px;right:32px;z-index:900;
+  width:42px;height:42px;border-radius:50%;
+  background:#fff;color:var(--forest);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;box-shadow:var(--s-md);
+  opacity:0;pointer-events:none;
+  transition:all var(--t-base) var(--ease);
+}
+.btt.show{opacity:1;pointer-events:auto}
+.btt:hover{background:var(--xpale);transform:translateY(-3px)}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+@media(max-width:1100px){
+  .about-grid{grid-template-columns:1fr;gap:52px}
+  .about-img-col{max-width:480px;margin:0 auto}
+  .why-grid{grid-template-columns:1fr;gap:52px}
+  .why-visual-col{max-width:480px;margin:0 auto}
+  .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .testi-card{flex:0 0 calc((100% - 24px)/2)}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .cta-nav{display:none}
+  .svc-grid{grid-template-columns:1fr}
+  .prod-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-stats-inner{grid-template-columns:repeat(2,1fr)}
+  .hstat{border-right:1px solid rgba(255,255,255,.07)}
+  .hstat:nth-child(2n){border-right:none}
+  .testi-card{flex:0 0 100%}
+  .fg-row{grid-template-columns:1fr}
+  .form-card{padding:28px 20px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .about-float-card{position:static;margin:16px 0 0;display:inline-flex;align-items:center;gap:14px}
+  .why-float-stat{position:static;margin:16px 0;display:flex}
+}
+@media(max-width:480px){
+  .wrap{padding:0 18px}
+  .hero-ctas{flex-direction:column;align-items:flex-start}
+  .hero-stats-inner{grid-template-columns:repeat(2,1fr)}
+  .prod-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+
+<!-- ====================================================
+     NAVBAR
+==================================================== -->
+<nav id="navbar">
+  <div class="nav-wrap">
+    <!-- Logo -->
+    <a href="#" class="nav-logo" aria-label="TP Poultry Home">
+      <div class="logo-mark">🐓</div>
+      <div class="logo-copy">
+        <span class="logo-name">TP Poultry & Feeds</span>
+        <span class="logo-tagline" data-ta="தமிழ்நாட்டின் நம்பகமான பண்ணை" data-en="Tamil Nadu's Premium Poultry Farm">தமிழ்நாட்டின் நம்பகமான பண்ணை</span>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="nav-links">
+      <li><a href="#about"    data-ta="எங்களை பற்றி" data-en="About">எங்களை பற்றி</a></li>
+      <li><a href="#services" data-ta="சேவைகள்"      data-en="Services">சேவைகள்</a></li>
+      <li><a href="#products" data-ta="பொருட்கள்"    data-en="Products">பொருட்கள்</a></li>
+      <li><a href="#why-us"   data-ta="ஏன் நாங்கள்?" data-en="Why Us">ஏன் நாங்கள்?</a></li>
+      <li><a href="#contact"  data-ta="தொடர்பு"      data-en="Contact">தொடர்பு</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="lang-toggle" id="langBtn" onclick="toggleLang()" aria-label="Toggle Language">
+        <i class="fas fa-globe"></i>
+        <span id="langLabel">EN</span>
+      </button>
+      <a href="https://wa.me/919876543210?text=Hello%20I%20want%20to%20order%20from%20TP%20Poultry%20and%20Feeds"
+         target="_blank" class="cta-nav" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+        <span data-ta="ஆர்டர்" data-en="Order Now">ஆர்டர்</span>
+      </a>
+      <button class="hamburger" id="hamBtn" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Close menu"><i class="fas fa-xmark"></i></button>
+  <a href="#about"    onclick="closeMobileMenu()" data-ta="எங்களை பற்றி" data-en="About">எங்களை பற்றி</a>
+  <a href="#services" onclick="closeMobileMenu()" data-ta="சேவைகள்"      data-en="Services">சேவைகள்</a>
+  <a href="#products" onclick="closeMobileMenu()" data-ta="பொருட்கள்"    data-en="Products">பொருட்கள்</a>
+  <a href="#why-us"   onclick="closeMobileMenu()" data-ta="ஏன் நாங்கள்?" data-en="Why Us?">ஏன் நாங்கள்?</a>
+  <a href="#testimonials" onclick="closeMobileMenu()" data-ta="மதிப்புரைகள்" data-en="Reviews">மதிப்புரைகள்</a>
+  <a href="#contact"  onclick="closeMobileMenu()" data-ta="தொடர்பு"      data-en="Contact">தொடர்பு</a>
+</div>
+
+<!-- ====================================================
+     HERO
+==================================================== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span data-ta="தமிழ்நாட்டின் நம்பகமான பண்ணை • 10+ ஆண்டுகள்" data-en="Tamil Nadu's Trusted Farm • 10+ Years">தமிழ்நாட்டின் நம்பகமான பண்ணை • 10+ ஆண்டுகள்</span>
+      </div>
+
+      <h1>TP Poultry<em>and Feeds</em></h1>
+
+      <p class="hero-sub" data-ta="நம்பிக்கைக்குரிய கோழி மற்றும் தீவன சேவை — புரோயலர், நாட்டுக்கோழி, காட்காந்த், அசீல் மற்றும் அனைத்து வகை தீவனங்கள்." data-en="Trusted poultry &amp; feed service — Broiler, Country Chicken, Kadaknath, Aseel and all types of animal feeds.">
+        நம்பிக்கைக்குரிய கோழி மற்றும் தீவன சேவை — புரோயலர், நாட்டுக்கோழி, காட்காந்த், அசீல் மற்றும் அனைத்து வகை தீவனங்கள்.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="https://wa.me/919876543210?text=Hello%20I%20want%20to%20order%20from%20TP%20Poultry%20and%20Feeds"
+           target="_blank" rel="noopener" class="btn btn-gold">
+          <i class="fab fa-whatsapp"></i>
+          <span data-ta="இப்போதே ஆர்டர் செய்யுங்கள்" data-en="Order Now on WhatsApp">இப்போதே ஆர்டர் செய்யுங்கள்</span>
+        </a>
+        <a href="#products" class="btn btn-ghost-white">
+          <i class="fas fa-egg"></i>
+          <span data-ta="எங்கள் பொருட்களை பாருங்கள்" data-en="View Our Products">எங்கள் பொருட்களை பாருங்கள்</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="hero-stats-bar">
+    <div class="hero-stats-inner">
+      <div class="hstat">
+        <div class="hstat-num"><span class="counter" data-target="500">0</span><span>+</span></div>
+        <div class="hstat-label" data-ta="மகிழ்ச்சியான வாடிக்கையாளர்கள்" data-en="Happy Customers">மகிழ்ச்சியான வாடிக்கையாளர்கள்</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num"><span class="counter" data-target="10">0</span><span>+</span></div>
+        <div class="hstat-label" data-ta="ஆண்டுகள் அனுபவம்" data-en="Years Experience">ஆண்டுகள் அனுபவம்</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num"><span class="counter" data-target="8">0</span><span>+</span></div>
+        <div class="hstat-label" data-ta="கோழி இனங்கள்" data-en="Chicken Breeds">கோழி இனங்கள்</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num"><span class="counter" data-target="1000">0</span><span>+</span></div>
+        <div class="hstat-label" data-ta="டெலிவரிகள்" data-en="Deliveries Done">டெலிவரிகள்</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wave -->
+  <div class="hero-bottom-wave">
+    <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 30 Q360 0 720 30 Q1080 60 1440 30 L1440 60 L0 60 Z" fill="#fefcf6"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ====================================================
+     ABOUT
+==================================================== -->
+<section class="about-sec" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <!-- Image column -->
+      <div class="about-img-col sr left">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=900&q=82"
+               alt="TP Poultry Farm" loading="lazy"/>
+        </div>
+        <div class="about-float-card">
+          <div class="afc-icon">🏆</div>
+          <div>
+            <div class="afc-num">10+</div>
+            <div class="afc-label" data-ta="ஆண்டுகள் அனுபவம்" data-en="Years of Excellence">ஆண்டுகள் அனுபவம்</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text column -->
+      <div class="about-text-col sr d2">
+        <span class="eyebrow" data-ta="எங்கள் கதை" data-en="Our Story">எங்கள் கதை</span>
+        <h2 data-ta="நம்பகம் மட்டுமே எங்கள் அடையாளம்" data-en="Trust Is Our Only Identity">நம்பகம் மட்டுமே எங்கள் அடையாளம்</h2>
+        <div class="divider"></div>
+
+        <blockquote class="about-pull" data-ta="&quot;தரமான கோழி, நேர்மையான விலை — இதுவே எங்கள் வாக்குறுதி.&quot;" data-en="&quot;Quality poultry, honest price — that is our promise.&quot;">
+          "தரமான கோழி, நேர்மையான விலை — இதுவே எங்கள் வாக்குறுதி."
+        </blockquote>
+
+        <p class="about-body-p" data-ta="TP Poultry and Feeds நிறுவனம் தமிழ்நாட்டில் தரமான கோழிகள் மற்றும் தீவனங்களை வழங்கும் நம்பிக்கையான நிறுவனம். கடந்த 10+ ஆண்டுகளாக விவசாயிகளுக்கும் வாடிக்கையாளர்களுக்கும் சிறந்த சேவையை வழங்கி வருகிறோம்."
+             data-en="TP Poultry and Feeds is a trusted company providing quality chickens and feeds across Tamil Nadu. For 10+ years, we have been delivering the finest service to farmers and customers alike.">
+          TP Poultry and Feeds நிறுவனம் தமிழ்நாட்டில் தரமான கோழிகள் மற்றும் தீவனங்களை வழங்கும் நம்பிக்கையான நிறுவனம். கடந்த 10+ ஆண்டுகளாக விவசாயிகளுக்கும் வாடிக்கையாளர்களுக்கும் சிறந்த சேவையை வழங்கி வருகிறோம்.
+        </p>
+        <p class="about-body-p" data-ta="புரோயலர், நாட்டுக்கோழி, காட்காந்த், அசீல், சோனாலி உட்பட 8+ கோழி இனங்கள் இயற்கை முறையில் வளர்க்கப்படுகின்றன. கோழி, மாடு, ஆடுகளுக்கான உயர் தரமான தீவனங்களும் கிடைக்கும்."
+             data-en="8+ chicken breeds including Broiler, Country, Kadaknath, Aseel, Sonali — all raised naturally. High-quality feeds for chickens, cows and goats are also available.">
+          புரோயலர், நாட்டுக்கோழி, காட்காந்த், அசீல், சோனாலி உட்பட 8+ கோழி இனங்கள் இயற்கை முறையில் வளர்க்கப்படுகின்றன.
+        </p>
+
+        <div class="about-chips">
+          <span class="chip"><i class="fas fa-leaf"></i><span data-ta="இயற்கை வளர்ப்பு" data-en="Natural Farming">இயற்கை வளர்ப்பு</span></span>
+          <span class="chip"><i class="fas fa-truck-fast"></i><span data-ta="விரைவு டெலிவரி" data-en="Fast Delivery">விரைவு டெலிவரி</span></span>
+          <span class="chip"><i class="fas fa-shield-halved"></i><span data-ta="தர உத்தரவாதம்" data-en="Quality Guarantee">தர உத்தரவாதம்</span></span>
+          <span class="chip"><i class="fas fa-tags"></i><span data-ta="சரியான விலை" data-en="Fair Pricing">சரியான விலை</span></span>
+          <span class="chip"><i class="fas fa-headset"></i><span data-ta="24/7 ஆதரவு" data-en="24/7 Support">24/7 ஆதரவு</span></span>
+        </div>
+
+        <div class="about-stats">
+          <div class="ast">
+            <div class="ast-n"><span class="counter" data-target="500">0</span><em>+</em></div>
+            <div class="ast-l" data-ta="வாடிக்கையாளர்கள்" data-en="Customers">வாடிக்கையாளர்கள்</div>
+          </div>
+          <div class="ast">
+            <div class="ast-n"><span class="counter" data-target="8">0</span><em>+</em></div>
+            <div class="ast-l" data-ta="கோழி இனங்கள்" data-en="Breeds">கோழி இனங்கள்</div>
+          </div>
+          <div class="ast">
+            <div class="ast-n"><span class="counter" data-target="1000">0</span><em>+</em></div>
+            <div class="ast-l" data-ta="டெலிவரிகள்" data-en="Deliveries">டெலிவரிகள்</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     SERVICES
+==================================================== -->
+<section class="services-sec" id="services">
+  <div class="wrap">
+    <div class="sec-header center sr">
+      <span class="eyebrow" data-ta="நாங்கள் வழங்குவது" data-en="What We Offer">நாங்கள் வழங்குவது</span>
+      <h2 data-ta="எங்கள் சேவைகள்" data-en="Our Services">எங்கள் சேவைகள்</h2>
+      <div class="divider center"></div>
+      <p style="color:var(--muted);font-size:1.05rem;max-width:500px;margin:0 auto" data-ta="கோழி குஞ்சு முதல் கால்நடை தீவனம் வரை — அனைத்தும் ஒரே இடத்தில்" data-en="From poultry chicks to animal feeds — everything in one place">கோழி குஞ்சு முதல் கால்நடை தீவனம் வரை — அனைத்தும் ஒரே இடத்தில்</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <div class="svc-card sr d1">
+        <div class="svc-icon-wrap">🐣</div>
+        <h3 data-ta="கோழி குஞ்சு விற்பனை" data-en="Poultry Chick Supply">கோழி குஞ்சு விற்பனை</h3>
+        <p data-ta="புரோயலர், நாட்டுக்கோழி, காட்காந்த், அசீல், சோனாலி உட்பட பல இனங்களின் தரமான குஞ்சுகள்" data-en="Quality chicks of multiple breeds — Broiler, Country, Kadaknath, Aseel, Sonali and more">புரோயலர், நாட்டுக்கோழி, காட்காந்த், அசீல், சோனாலி உட்பட பல இனங்களின் தரமான குஞ்சுகள்</p>
+        <div class="svc-card-cta"><i class="fas fa-arrow-right"></i><span data-ta="மேலும் அறிய" data-en="Learn more">மேலும் அறிய</span></div>
+      </div>
+
+      <div class="svc-card sr d2">
+        <div class="svc-icon-wrap">🐔</div>
+        <h3 data-ta="நாட்டுக்கோழி" data-en="Country Chicken (Nattu Kozhi)">நாட்டுக்கோழி</h3>
+        <p data-ta="இயற்கை முறையில் வளர்க்கப்பட்ட நாட்டுக்கோழி — தடிமனான, சுவையான, ஆரோக்கியமான இறைச்சி" data-en="Naturally raised country chicken — firm, tasty, and healthy meat">இயற்கை முறையில் வளர்க்கப்பட்ட நாட்டுக்கோழி — தடிமனான, சுவையான, ஆரோக்கியமான இறைச்சி</p>
+        <div class="svc-card-cta"><i class="fas fa-arrow-right"></i><span data-ta="மேலும் அறிய" data-en="Learn more">மேலும் அறிய</span></div>
+      </div>
+
+      <div class="svc-card sr d3">
+        <div class="svc-icon-wrap">🥚</div>
+        <h3 data-ta="முட்டை விற்பனை" data-en="Eggs Supply">முட்டை விற்பனை</h3>
+        <p data-ta="வெள்ளை முட்டை, பழுப்பு முட்டை மற்றும் ஆர்கானிக் முட்டைகள் — தினமும் புதியதாக கிடைக்கும்" data-en="White, Brown and Organic eggs — available fresh every day">வெள்ளை முட்டை, பழுப்பு முட்டை மற்றும் ஆர்கானிக் முட்டைகள் — தினமும் புதியதாக</p>
+        <div class="svc-card-cta"><i class="fas fa-arrow-right"></i><span data-ta="மேலும் அறிய" data-en="Learn more">மேலும் அறிய</span></div>
+      </div>
+
+      <div class="svc-card dark sr d1">
+        <div class="svc-icon-wrap">🦚</div>
+        <h3 data-ta="சிறப்பு கோழி இனங்கள்" data-en="Special Chicken Breeds">சிறப்பு கோழி இனங்கள்</h3>
+        <p data-ta="காட்காந்த் • அசீல் • சோனாலி — அரிய, தரமான, மருத்துவ குணமுள்ள கோழி இனங்கள்" data-en="Kadaknath • Aseel • Sonali — rare, premium, medicinal chicken breeds">காட்காந்த் • அசீல் • சோனாலி — அரிய, தரமான, மருத்துவ குணமுள்ள கோழி இனங்கள்</p>
+        <div class="svc-card-cta"><i class="fas fa-arrow-right"></i><span data-ta="மேலும் அறிய" data-en="Learn more">மேலும் அறிய</span></div>
+      </div>
+
+      <div class="svc-card sr d2">
+        <div class="svc-icon-wrap">🏡</div>
+        <h3 data-ta="கோழி பண்ணை சேவைகள்" data-en="Chicken Farming Services">கோழி பண்ணை சேவைகள்</h3>
+        <p data-ta="புதிய பண்ணை தொடங்க அமைப்பு, நிர்வாகம் மற்றும் நிபுணர் ஆலோசனை வழங்குகிறோம்" data-en="Setup, management and expert consulting to start a new chicken farm">புதிய பண்ணை தொடங்க அமைப்பு, நிர்வாகம் மற்றும் நிபுணர் ஆலோசனை வழங்குகிறோம்</p>
+        <div class="svc-card-cta"><i class="fas fa-arrow-right"></i><span data-ta="மேலும் அறிய" data-en="Learn more">மேலும் அறிய</span></div>
+      </div>
+
+      <div class="svc-card sr d3">
+        <div class="svc-icon-wrap">🦃</div>
+        <h3 data-ta="வான்கோழி பண்ணை" data-en="Turkey Farming">வான்கோழி பண்ணை</h3>
+        <p data-ta="வான்கோழி வளர்ப்புக்கான முழுமையான வழிகாட்டுதல், குஞ்சுகள் மற்றும் ஆலோசனை சேவை" data-en="Complete guidance, chicks and consulting for turkey farming">வான்கோழி வளர்ப்புக்கான முழுமையான வழிகாட்டுதல், குஞ்சுகள் மற்றும் ஆலோசனை</p>
+        <div class="svc-card-cta"><i class="fas fa-arrow-right"></i><span data-ta="மேலும் அறிய" data-en="Learn more">மேலும் அறிய</span></div>
+      </div>
+
+      <div class="svc-card gold sr d1" style="grid-column:1/-1">
+        <div class="svc-icon-wrap">🌾</div>
+        <h3 data-ta="கால்நடை தீவனங்கள்" data-en="Animal Feeds">கால்நடை தீவனங்கள்</h3>
+        <p data-ta="கோழி தீவனம் • மாட்டு தீவனம் • ஆட்டு தீவனம் — ஊட்டச்சத்து நிறைந்த, உயர் தரமான தீவனங்கள் மொத்த மற்றும் சில்லறை விலையில் கிடைக்கும். விவசாயிகளுக்கு சிறப்பு தள்ளுபடி." data-en="Chicken Feed • Cow Feed • Goat Feed — nutrient-rich, high-quality feeds available at wholesale and retail prices. Special discounts for farmers.">கோழி தீவனம் • மாட்டு தீவனம் • ஆட்டு தீவனம் — ஊட்டச்சத்து நிறைந்த, உயர் தரமான தீவனங்கள் மொத்த மற்றும் சில்லறை விலையில் கிடைக்கும். விவசாயிகளுக்கு சிறப்பு தள்ளுபடி.</p>
+        <div class="svc-card-cta"><i class="fas fa-arrow-right"></i><span data-ta="இப்போதே ஆர்டர் செய்யுங்கள்" data-en="Order Now">இப்போதே ஆர்டர் செய்யுங்கள்</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     PRODUCTS
+==================================================== -->
+<section class="products-sec" id="products">
+  <div class="wrap">
+    <div class="sec-header center sr">
+      <span class="eyebrow" data-ta="பொருட்கள்" data-en="Products">பொருட்கள்</span>
+      <h2 data-ta="எங்கள் பொருட்கள்" data-en="Our Products">எங்கள் பொருட்கள்</h2>
+      <div class="divider center"></div>
+    </div>
+
+    <div class="prod-grid" id="prodGrid">
+
+      <div class="prod-card sr d1">
+        <div class="prod-thumb" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9)">
+          <div class="prod-thumb-emoji">🍗</div>
+          <span class="prod-badge pb-fresh" data-ta="புதியது" data-en="Fresh">புதியது</span>
+        </div>
+        <div class="prod-body">
+          <h3 data-ta="புரோயலர் கோழி" data-en="Broiler Chicken">புரோயலர் கோழி</h3>
+          <p data-ta="தினமும் புதியதாக — முழு அல்லது கட்டிங் கிடைக்கும்" data-en="Fresh daily — whole or cut pieces available">தினமும் புதியதாக — முழு அல்லது கட்டிங் கிடைக்கும்</p>
+          <div class="prod-footer">
+            <span class="prod-price-tag" data-ta="விலைக்கு அழைக்கவும்" data-en="Call for price">விலைக்கு அழைக்கவும்</span>
+            <a href="https://wa.me/919876543210?text=I%20want%20Broiler%20Chicken" target="_blank" class="enquire-btn"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card sr d2">
+        <div class="prod-thumb" style="background:linear-gradient(135deg,#fff8e1,#ffecb3)">
+          <div class="prod-thumb-emoji">🐓</div>
+          <span class="prod-badge pb-special" data-ta="இயற்கை" data-en="Natural">இயற்கை</span>
+        </div>
+        <div class="prod-body">
+          <h3 data-ta="நாட்டுக்கோழி" data-en="Country Chicken">நாட்டுக்கோழி</h3>
+          <p data-ta="இயற்கை வளர்ப்பு — சுவை உத்தரவாதம்" data-en="Naturally raised — taste guaranteed">இயற்கை வளர்ப்பு — சுவை உத்தரவாதம்</p>
+          <div class="prod-footer">
+            <span class="prod-price-tag" data-ta="விலைக்கு அழைக்கவும்" data-en="Call for price">விலைக்கு அழைக்கவும்</span>
+            <a href="https://wa.me/919876543210?text=I%20want%20Country%20Chicken" target="_blank" class="enquire-btn"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card sr d3">
+        <div class="prod-thumb" style="background:linear-gradient(135deg,#f1f8e9,#dcedc8)">
+          <div class="prod-thumb-emoji">🐣</div>
+          <span class="prod-badge pb-fresh" data-ta="பல இனங்கள்" data-en="Multi-Breed">பல இனங்கள்</span>
+        </div>
+        <div class="prod-body">
+          <h3 data-ta="கோழி குஞ்சுகள்" data-en="Poultry Chicks">கோழி குஞ்சுகள்</h3>
+          <p data-ta="8+ இனங்கள் — புரோயலர், நாட்டுக்கோழி, காட்காந்த், அசீல், சோனாலி" data-en="8+ breeds — Broiler, Country, Kadaknath, Aseel, Sonali">8+ இனங்கள் — புரோயலர், நாட்டுக்கோழி, காட்காந்த், அசீல், சோனாலி</p>
+          <div class="prod-footer">
+            <span class="prod-price-tag" data-ta="விலைக்கு அழைக்கவும்" data-en="Call for price">விலைக்கு அழைக்கவும்</span>
+            <a href="https://wa.me/919876543210?text=I%20want%20Poultry%20Chicks" target="_blank" class="enquire-btn"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card sr d4">
+        <div class="prod-thumb" style="background:linear-gradient(135deg,#fff9e6,#ffeaa0)">
+          <div class="prod-thumb-emoji">🥚</div>
+          <span class="prod-badge pb-special" data-ta="3 வகைகள்" data-en="3 Varieties">3 வகைகள்</span>
+        </div>
+        <div class="prod-body">
+          <h3 data-ta="முட்டைகள்" data-en="Eggs (White / Brown / Organic)">முட்டைகள்</h3>
+          <p data-ta="வெள்ளை • பழுப்பு • ஆர்கானிக் — தினசரி புதிய கிடைக்கும்" data-en="White • Brown • Organic — available fresh daily">வெள்ளை • பழுப்பு • ஆர்கானிக் — தினசரி புதியது</p>
+          <div class="prod-footer">
+            <span class="prod-price-tag" data-ta="விலைக்கு அழைக்கவும்" data-en="Call for price">விலைக்கு அழைக்கவும்</span>
+            <a href="https://wa.me/919876543210?text=I%20want%20Eggs" target="_blank" class="enquire-btn"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card sr d1">
+        <div class="prod-thumb" style="background:linear-gradient(135deg,#1c1c2e,#2e2e4a)">
+          <div class="prod-thumb-emoji">🦅</div>
+          <span class="prod-badge pb-premium" data-ta="பிரீமியம்" data-en="Premium">பிரீமியம்</span>
+        </div>
+        <div class="prod-body">
+          <h3 data-ta="காட்காந்த் கோழி" data-en="Kadaknath Chicken">காட்காந்த் கோழி</h3>
+          <p data-ta="அரிய கருப்பு இறைச்சி கோழி — மருத்துவ குணம் நிறைந்தது" data-en="Rare black meat chicken — packed with medicinal properties">அரிய கருப்பு இறைச்சி கோழி — மருத்துவ குணம் நிறைந்தது</p>
+          <div class="prod-footer">
+            <span class="prod-price-tag" data-ta="விலைக்கு அழைக்கவும்" data-en="Call for price">விலைக்கு அழைக்கவும்</span>
+            <a href="https://wa.me/919876543210?text=I%20want%20Kadaknath%20Chicken" target="_blank" class="enquire-btn"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card sr d2">
+        <div class="prod-thumb" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2)">
+          <div class="prod-thumb-emoji">🐦</div>
+          <span class="prod-badge pb-special" data-ta="சிறப்பு" data-en="Special">சிறப்பு</span>
+        </div>
+        <div class="prod-body">
+          <h3 data-ta="அசீல் கோழி" data-en="Aseel Chicken">அசீல் கோழி</h3>
+          <p data-ta="பாரம்பரிய இனம் — கெட்டியான இறைச்சி, சிறப்பான சுவை" data-en="Traditional breed — firm meat, exceptional flavor">பாரம்பரிய இனம் — கெட்டியான இறைச்சி, சிறப்பான சுவை</p>
+          <div class="prod-footer">
+            <span class="prod-price-tag" data-ta="விலைக்கு அழைக்கவும்" data-en="Call for price">விலைக்கு அழைக்கவும்</span>
+            <a href="https://wa.me/919876543210?text=I%20want%20Aseel%20Chicken" target="_blank" class="enquire-btn"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card sr d3">
+        <div class="prod-thumb" style="background:linear-gradient(135deg,#e8f5e9,#a5d6a7)">
+          <div class="prod-thumb-emoji">🐤</div>
+          <span class="prod-badge pb-fresh" data-ta="கலப்பு இனம்" data-en="Hybrid">கலப்பு இனம்</span>
+        </div>
+        <div class="prod-body">
+          <h3 data-ta="சோனாலி கோழி" data-en="Sonali Chicken">சோனாலி கோழி</h3>
+          <p data-ta="அதிக வளர்ச்சி, குறைந்த செலவு — விவசாயிகளுக்கு சிறந்த தேர்வு" data-en="Fast growth, low cost — best choice for farmers">அதிக வளர்ச்சி, குறைந்த செலவு — விவசாயிகளுக்கு சிறந்த தேர்வு</p>
+          <div class="prod-footer">
+            <span class="prod-price-tag" data-ta="விலைக்கு அழைக்கவும்" data-en="Call for price">விலைக்கு அழைக்கவும்</span>
+            <a href="https://wa.me/919876543210?text=I%20want%20Sonali%20Chicken" target="_blank" class="enquire-btn"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card sr d4">
+        <div class="prod-thumb" style="background:linear-gradient(135deg,#fef9ec,#fde68a)">
+          <div class="prod-thumb-emoji">🌾</div>
+          <span class="prod-badge pb-special" data-ta="மொத்த விலை" data-en="Wholesale">மொத்த விலை</span>
+        </div>
+        <div class="prod-body">
+          <h3 data-ta="கால்நடை தீவனங்கள்" data-en="Animal Feeds">கால்நடை தீவனங்கள்</h3>
+          <p data-ta="கோழி • மாட்டு • ஆட்டு தீவனங்கள் — மொத்த & சில்லறை விலையில்" data-en="Chicken • Cow • Goat feeds — wholesale & retail pricing">கோழி • மாட்டு • ஆட்டு தீவனங்கள் — மொத்த & சில்லறை விலையில்</p>
+          <div class="prod-footer">
+            <span class="prod-price-tag" data-ta="விலைக்கு அழைக்கவும்" data-en="Call for price">விலைக்கு அழைக்கவும்</span>
+            <a href="https://wa.me/919876543210?text=I%20want%20Animal%20Feeds" target="_blank" class="enquire-btn"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     WHY US
+==================================================== -->
+<section class="why-sec" id="why-us">
+  <div class="wrap">
+    <div class="why-grid">
+
+      <!-- Visual -->
+      <div class="why-visual-col sr left">
+        <div class="why-img-card">
+          <img src="https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800&q=82"
+               alt="Farm quality" loading="lazy"/>
+          <div class="why-img-overlay"></div>
+          <div class="why-img-text">
+            <div class="wit-kicker" data-ta="எங்கள் உறுதிமொழி" data-en="Our Promise">எங்கள் உறுதிமொழி</div>
+            <div class="wit-title" data-ta="தரம் + நம்பகம் = TP Poultry" data-en="Quality + Trust = TP Poultry">தரம் + நம்பகம் = TP Poultry</div>
+          </div>
+        </div>
+        <div class="why-float-stat">
+          <div class="wfs-icon"><i class="fas fa-award"></i></div>
+          <div>
+            <div class="wfs-num"><span class="counter" data-target="500">0</span>+</div>
+            <div class="wfs-label" data-ta="மகிழ்ச்சியான குடும்பங்கள்" data-en="Happy Families">மகிழ்ச்சியான குடும்பங்கள்</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why list -->
+      <div class="sr d2">
+        <span class="eyebrow" data-ta="ஏன் நாங்கள்?" data-en="Why Choose Us?">ஏன் நாங்கள்?</span>
+        <h2 style="margin-bottom:10px" data-ta="ஏன் TP Poultry and Feeds?" data-en="Why TP Poultry and Feeds?">ஏன் TP Poultry and Feeds?</h2>
+        <div class="divider"></div>
+        <p style="color:var(--muted);margin-bottom:32px;font-size:1rem" data-ta="தரம், நம்பகம் மற்றும் சேவை — இந்த மூன்றும் எங்கள் அடித்தளம்" data-en="Quality, trust and service — these three form our foundation">தரம், நம்பகம் மற்றும் சேவை — இந்த மூன்றும் எங்கள் அடித்தளம்</p>
+
+        <div class="why-list">
+          <div class="why-row">
+            <div class="why-row-icon"><i class="fas fa-shield-heart"></i></div>
+            <div class="why-row-text">
+              <h4 data-ta="தரமான மற்றும் ஆரோக்கியமான கோழிகள்" data-en="High Quality & Healthy Chickens">தரமான மற்றும் ஆரோக்கியமான கோழிகள்</h4>
+              <p data-ta="இயற்கை உணவு, சுத்தமான சூழல் — ஒவ்வொரு கோழியும் கவனமாக வளர்க்கப்படுகிறது" data-en="Natural food, clean environment — every chicken raised with care">இயற்கை உணவு, சுத்தமான சூழல் — ஒவ்வொரு கோழியும் கவனமாக வளர்க்கப்படுகிறது</p>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-row-icon"><i class="fas fa-handshake"></i></div>
+            <div class="why-row-text">
+              <h4 data-ta="நம்பிக்கையான சேவை" data-en="Trusted Service">நம்பிக்கையான சேவை</h4>
+              <p data-ta="10+ ஆண்டுகளாக 500+ வாடிக்கையாளர்களின் நம்பிக்கை — எங்கள் பெரிய சாதனை" data-en="10+ years, 500+ customers' trust — our greatest achievement">10+ ஆண்டுகளாக 500+ வாடிக்கையாளர்களின் நம்பிக்கை — எங்கள் பெரிய சாதனை</p>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-row-icon"><i class="fas fa-tags"></i></div>
+            <div class="why-row-text">
+              <h4 data-ta="குறைந்த விலை" data-en="Affordable Price">குறைந்த விலை</h4>
+              <p data-ta="நேரடி விற்பனை என்பதால் தரகர் இல்லாமல் — மிதமான விலையில் சிறந்த தரம்" data-en="Direct sale without middlemen — best quality at affordable price">நேரடி விற்பனை என்பதால் தரகர் இல்லாமல் — மிதமான விலையில் சிறந்த தரம்</p>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-row-icon"><i class="fas fa-truck-fast"></i></div>
+            <div class="why-row-text">
+              <h4 data-ta="விரைவான விநியோகம்" data-en="Fast Delivery">விரைவான விநியோகம்</h4>
+              <p data-ta="உங்கள் இடத்திற்கே புதிய கோழிகளை விரைவாக, பாதுகாப்பாக டெலிவரி செய்கிறோம்" data-en="We deliver fresh chickens quickly and safely right to your doorstep">உங்கள் இடத்திற்கே புதிய கோழிகளை விரைவாக, பாதுகாப்பாக டெலிவரி</p>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-row-icon"><i class="fas fa-phone-volume"></i></div>
+            <div class="why-row-text">
+              <h4 data-ta="24/7 வாடிக்கையாளர் ஆதரவு" data-en="24/7 Customer Support">24/7 வாடிக்கையாளர் ஆதரவு</h4>
+              <p data-ta="எந்த நேரத்திலும் WhatsApp மூலம் உடனடியாக தொடர்பு கொள்ளலாம்" data-en="Reach us instantly via WhatsApp at any time of day or night">எந்த நேரத்திலும் WhatsApp மூலம் உடனடியாக தொடர்பு கொள்ளலாம்</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     TESTIMONIALS
+==================================================== -->
+<section class="testi-sec" id="testimonials">
+  <div class="wrap">
+    <div class="sec-header center sr">
+      <span class="eyebrow" data-ta="வாடிக்கையாளர் மதிப்புரைகள்" data-en="Customer Reviews">வாடிக்கையாளர் மதிப்புரைகள்</span>
+      <h2 data-ta="வாடிக்கையாளர்கள் சொல்கிறார்கள்" data-en="What Our Customers Say">வாடிக்கையாளர்கள் சொல்கிறார்கள்</h2>
+      <div class="divider center"></div>
+    </div>
+
+    <div class="testi-slider-wrap" id="testiWrap">
+      <div class="testi-track" id="testiTrack">
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-text" data-ta="&quot;10 ஆண்டுகளாக TP Poultry-ல் இருந்து கோழி வாங்குகிறேன். தரம் எப்போதும் சிறந்தது. விலை நியாயமானது. நான் எப்போதும் இவர்களை பரிந்துரைக்கிறேன்.&quot;" data-en="&quot;I have been buying chickens from TP Poultry for 10 years. The quality is always excellent. Price is fair. I always recommend them.&quot;">
+            "10 ஆண்டுகளாக TP Poultry-ல் இருந்து கோழி வாங்குகிறேன். தரம் எப்போதும் சிறந்தது. விலை நியாயமானது."
+          </p>
+          <div class="testi-author">
+            <div class="testi-av">ர</div>
+            <div>
+              <div class="testi-name">ரமேஷ் குமார்</div>
+              <div class="testi-loc">🏘 கோவை</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-text" data-ta="&quot;காட்காந்த் குஞ்சுகள் மிகவும் ஆரோக்கியமாக வந்தன. சரியான நேரத்தில் டெலிவரி. TP Poultry சேவை மிகவும் நம்பகமானது!&quot;" data-en="&quot;The Kadaknath chicks arrived very healthy. Delivery was on time. TP Poultry service is very reliable!&quot;">
+            "காட்காந்த் குஞ்சுகள் மிகவும் ஆரோக்கியமாக வந்தன. சரியான நேரத்தில் டெலிவரி. மிகவும் நம்பகமான சேவை!"
+          </p>
+          <div class="testi-author">
+            <div class="testi-av">ம</div>
+            <div>
+              <div class="testi-name">முருகேஷ் பண்ணை</div>
+              <div class="testi-loc">🏘 திருப்பூர்</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-text" data-ta="&quot;தீவனம் தரம் அருமை. மாட்டுக்கும் கோழிக்கும் வாங்குகிறேன். விலையும் மற்ற கடைகளை விட குறைவாக இருக்கிறது. மிகவும் நன்றி!&quot;" data-en="&quot;The feed quality is excellent. I buy for both cows and chickens. The price is lower than other shops too. Many thanks!&quot;">
+            "தீவனம் தரம் அருமை. மாட்டுக்கும் கோழிக்கும் வாங்குகிறேன். விலையும் மற்ற கடைகளை விட குறைவாக உள்ளது!"
+          </p>
+          <div class="testi-author">
+            <div class="testi-av">வ</div>
+            <div>
+              <div class="testi-name">வேலு விவசாயி</div>
+              <div class="testi-loc">🏘 ஈரோடு</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-text" data-ta="&quot;நாட்டுக்கோழி சுவை இங்கு தான் சிறந்தது. WhatsApp-ல் ஆர்டர் செய்தவுடன் அன்றே டெலிவரி கிடைத்தது. மிகவும் திருப்திகரம்!&quot;" data-en="&quot;Country chicken taste is best here. Ordered on WhatsApp and got delivery the same day. Very satisfying!&quot;">
+            "நாட்டுக்கோழி சுவை இங்கு தான் சிறந்தது. WhatsApp-ல் ஆர்டர் செய்தவுடன் அன்றே டெலிவரி. மிகவும் திருப்திகரம்!"
+          </p>
+          <div class="testi-author">
+            <div class="testi-av">ப</div>
+            <div>
+              <div class="testi-name">பாலாஜி ரெட்டியார்</div>
+              <div class="testi-loc">🏘 சேலம்</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-text" data-ta="&quot;புதிய பண்ணை தொடங்க TP Poultry ஆலோசனை மிகவும் உதவியது. சரியான வழிகாட்டுதல், நல்ல தரமான குஞ்சுகள். மனமார நன்றி!&quot;" data-en="&quot;TP Poultry consulting was very helpful to start my new farm. Proper guidance, good quality chicks. Heartfelt thanks!&quot;">
+            "புதிய பண்ணை தொடங்க TP Poultry ஆலோசனை மிகவும் உதவியது. சரியான வழிகாட்டுதல், நல்ல தரமான குஞ்சுகள்!"
+          </p>
+          <div class="testi-author">
+            <div class="testi-av">க</div>
+            <div>
+              <div class="testi-name">கார்த்திக் பண்ணைக்காரர்</div>
+              <div class="testi-loc">🏘 நாமக்கல்</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /track -->
+    </div><!-- /wrap -->
+
+    <div class="testi-controls">
+      <button class="testi-arrow" id="tPrev" onclick="testiPrev()" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+      <div class="testi-dots" id="testiDots"></div>
+      <button class="testi-arrow" id="tNext" onclick="testiNext()" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     CONTACT
+==================================================== -->
+<section class="contact-sec" id="contact">
+  <div class="wrap">
+    <div class="sec-header center sr">
+      <span class="eyebrow" data-ta="தொடர்பு" data-en="Contact Us">தொடர்பு</span>
+      <h2 data-ta="எங்களை தொடர்பு கொள்ளுங்கள்" data-en="Get In Touch With Us">எங்களை தொடர்பு கொள்ளுங்கள்</h2>
+      <div class="divider center"></div>
+      <p style="color:var(--muted);font-size:1rem;max-width:480px;margin:0 auto" data-ta="ஆர்டர் செய்ய, விசாரிக்க அல்லது ஆலோசனை பெற — நாங்கள் எப்போதும் உங்களுக்காக காத்திருக்கிறோம்" data-en="To order, inquire or consult — we are always here for you">ஆர்டர் செய்ய, விசாரிக்க அல்லது ஆலோசனை பெற — நாங்கள் எப்போதும் உங்களுக்காக</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Info card -->
+      <div class="sr left">
+        <div class="contact-info-card">
+          <div class="cic-header">
+            <h3 data-ta="தொடர்பு விவரங்கள்" data-en="Contact Details">தொடர்பு விவரங்கள்</h3>
+            <p data-ta="இன்றே அழைக்கவும் அல்லது WhatsApp செய்யவும் — விரைவான பதில் உறுதி" data-en="Call or WhatsApp us today — quick response guaranteed">இன்றே அழைக்கவும் அல்லது WhatsApp செய்யவும் — விரைவான பதில் உறுதி</p>
+          </div>
+          <div class="cic-body">
+            <div class="cinfo-item">
+              <div class="ci-icon-wrap"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="ci-label" data-ta="தொலைபேசி" data-en="Phone">தொலைபேசி</div>
+                <div class="ci-value"><a href="tel:+918344799050">+91 83447 99050</a></div>
+              </div>
+            </div>
+            <div class="cinfo-item">
+              <div class="ci-icon-wrap"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="ci-label" data-ta="மின்னஞ்சல்" data-en="Email">மின்னஞ்சல்</div>
+                <div class="ci-value"><a href="mailto:tp.agency@gmail.com">tp.agency@gmail.com</a></div>
+              </div>
+            </div>
+            <div class="cinfo-item">
+              <div class="ci-icon-wrap"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <div class="ci-label" data-ta="முகவரி" data-en="Address">முகவரி</div>
+                <div class="ci-value" data-ta="<div class="address" 
+     data-en="1/12/3, ECR Main Road, Thirupoondi, Keezhpidaagai, Nagapattinam, Tamil Nadu - 611111">
+     
+    1/12/3, ECR மெயின் ரோடு, திருப்பூண்டி, கீழ்பிடாகை, நாகப்பட்டினம், தமிழ்நாடு - 611111
+
+</div>
+              </div>
+            </div>
+            <div class="cinfo-item">
+              <div class="ci-icon-wrap"><i class="fas fa-clock"></i></div>
+              <div>
+                <div class="ci-label" data-ta="நேரம்" data-en="Working Hours">நேரம்</div>
+                <div class="ci-value" data-ta="திங்கள் – சனி | காலை 6:00 – மாலை 8:00" data-en="Mon – Sat | 6:00 AM – 8:00 PM">திங்கள் – சனி | காலை 6:00 – மாலை 8:00</div>
+              </div>
+            </div>
+            <a href="https://wa.me/918344799050?text=Hello%20I%20want%20to%20order%20from%20TP%20Poultry%20and%20Feeds" target="_blank" rel="noopener" class="cic-wa-btn">
+              <i class="fab fa-whatsapp"></i>
+              <span data-ta="WhatsApp-ல் ஆர்டர் செய்யுங்கள்" data-en="Order via WhatsApp">WhatsApp-ல் ஆர்டர் செய்யுங்கள்</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="form-card sr d2" onsubmit="handleSubmit(event)" novalidate>
+        <div class="form-card-title" data-ta="செய்தி அனுப்பவும்" data-en="Send a Message">செய்தி அனுப்பவும்</div>
+        <p class="form-card-sub" data-ta="உங்கள் தேவையை பகிரவும் — நாங்கள் விரைவில் தொடர்பு கொள்கிறோம்" data-en="Share your needs — we'll get back to you soon">உங்கள் தேவையை பகிரவும் — நாங்கள் விரைவில் தொடர்பு கொள்கிறோம்</p>
+
+        <div class="fg-row">
+          <div class="fg">
+            <label data-ta="பெயர் *" data-en="Name *">பெயர் *</label>
+            <input type="text" id="f-name" required
+              data-ta-ph="உங்கள் பெயர்" data-en-ph="Your name"
+              placeholder="உங்கள் பெயர்"/>
+          </div>
+          <div class="fg">
+            <label data-ta="தொலைபேசி *" data-en="Phone *">தொலைபேசி *</label>
+            <input type="tel" id="f-phone" required
+              data-ta-ph="கைப்பேசி எண்" data-en-ph="Mobile number"
+              placeholder="கைப்பேசி எண்"/>
+          </div>
+        </div>
+        <div class="fg">
+          <label data-ta="மின்னஞ்சல்" data-en="Email (Optional)">மின்னஞ்சல்</label>
+          <input type="email" id="f-email"
+            data-ta-ph="மின்னஞ்சல் (விருப்பம்)" data-en-ph="Email (optional)"
+            placeholder="மின்னஞ்சல் (விருப்பம்)"/>
+        </div>
+        <div class="fg">
+          <label data-ta="தேவையான பொருள்" data-en="Product / Service">தேவையான பொருள்</label>
+          <select id="f-product">
+            <option value="" data-ta="-- தேர்வு செய்யுங்கள் --" data-en="-- Select Product --">-- தேர்வு செய்யுங்கள் --</option>
+            <option data-ta="புரோயலர் கோழி" data-en="Broiler Chicken">புரோயலர் கோழி</option>
+            <option data-ta="நாட்டுக்கோழி" data-en="Country Chicken">நாட்டுக்கோழி</option>
+            <option data-ta="கோழி குஞ்சுகள்" data-en="Poultry Chicks">கோழி குஞ்சுகள்</option>
+            <option data-ta="முட்டைகள்" data-en="Eggs">முட்டைகள்</option>
+            <option data-ta="காட்காந்த் கோழி" data-en="Kadaknath Chicken">காட்காந்த் கோழி</option>
+            <option data-ta="அசீல் கோழி" data-en="Aseel Chicken">அசீல் கோழி</option>
+            <option data-ta="சோனாலி கோழி" data-en="Sonali Chicken">சோனாலி கோழி</option>
+            <option data-ta="வான்கோழி" data-en="Turkey">வான்கோழி</option>
+            <option data-ta="கால்நடை தீவனங்கள்" data-en="Animal Feeds">கால்நடை தீவனங்கள்</option>
+            <option data-ta="பண்ணை ஆலோசனை" data-en="Farm Consulting">பண்ணை ஆலோசனை</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label data-ta="செய்தி" data-en="Message">செய்தி</label>
+          <textarea id="f-msg" rows="4"
+            data-ta-ph="உங்கள் ஆர்டர் அல்லது கேள்வியை இங்கே உள்ளிடவும்..."
+            data-en-ph="Enter your order or question here..."
+            placeholder="உங்கள் ஆர்டர் அல்லது கேள்வியை இங்கே உள்ளிடவும்..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          <i class="fab fa-whatsapp"></i>
+          <span data-ta="WhatsApp-ல் அனுப்பவும்" data-en="Send via WhatsApp">WhatsApp-ல் அனுப்பவும்</span>
+        </button>
+        <div class="form-success-msg" id="formSuccess">
+          <i class="fas fa-circle-check" style="font-size:1.2rem;flex-shrink:0"></i>
+          <span data-ta="நன்றி! WhatsApp திறக்கிறது… நாங்கள் விரைவில் பதில் அளிப்போம்!" data-en="Thank you! Opening WhatsApp… We'll reply soon!">நன்றி! WhatsApp திறக்கிறது… நாங்கள் விரைவில் பதில் அளிப்போம்!</span>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     FOOTER
+==================================================== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="wrap">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div>
+          <div class="f-brand-logo">
+            <div class="logo-mark">🐓</div>
+            <div>
+              <div class="f-brand-name">TP Poultry and Feeds</div>
+              <div class="f-brand-tagline" data-ta="தமிழ்நாட்டின் நம்பகமான பண்ணை" data-en="Tamil Nadu's Trusted Farm">தமிழ்நாட்டின் நம்பகமான பண்ணை</div>
+            </div>
+          </div>
+          <p class="f-about" data-ta="தரமான கோழிகள், முட்டைகள் மற்றும் தீவனங்களை வழங்கும் நம்பிக்கையான நிறுவனம். 10+ ஆண்டு அனுபவம்." data-en="Trusted provider of quality chickens, eggs and animal feeds. 10+ years of experience.">தரமான கோழிகள், முட்டைகள் மற்றும் தீவனங்களை வழங்கும் நம்பிக்கையான நிறுவனம். 10+ ஆண்டு அனுபவம்.</p>
+          <div class="socials">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/919876543210" target="_blank" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="f-col">
+          <h5 data-ta="விரைவு இணைப்புகள்" data-en="Quick Links">விரைவு இணைப்புகள்</h5>
+          <ul>
+            <li><a href="#about"    data-ta="எங்களை பற்றி" data-en="About">எங்களை பற்றி</a></li>
+            <li><a href="#services" data-ta="சேவைகள்"      data-en="Services">சேவைகள்</a></li>
+            <li><a href="#products" data-ta="பொருட்கள்"    data-en="Products">பொருட்கள்</a></li>
+            <li><a href="#why-us"   data-ta="ஏன் நாங்கள்?" data-en="Why Us?">ஏன் நாங்கள்?</a></li>
+            <li><a href="#testimonials" data-ta="மதிப்புரைகள்" data-en="Reviews">மதிப்புரைகள்</a></li>
+            <li><a href="#contact"  data-ta="தொடர்பு"      data-en="Contact">தொடர்பு</a></li>
+          </ul>
+        </div>
+
+        <!-- Products -->
+        <div class="f-col">
+          <h5 data-ta="பொருட்கள்" data-en="Products">பொருட்கள்</h5>
+          <ul>
+            <li><a href="#products" data-ta="புரோயலர் கோழி"  data-en="Broiler Chicken">புரோயலர் கோழி</a></li>
+            <li><a href="#products" data-ta="நாட்டுக்கோழி"    data-en="Country Chicken">நாட்டுக்கோழி</a></li>
+            <li><a href="#products" data-ta="காட்காந்த்"       data-en="Kadaknath">காட்காந்த்</a></li>
+            <li><a href="#products" data-ta="அசீல் / சோனாலி"  data-en="Aseel / Sonali">அசீல் / சோனாலி</a></li>
+            <li><a href="#products" data-ta="முட்டைகள்"         data-en="Eggs">முட்டைகள்</a></li>
+            <li><a href="#products" data-ta="தீவனங்கள்"         data-en="Animal Feeds">தீவனங்கள்</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="f-col">
+          <h5 data-ta="தொடர்பு" data-en="Contact">தொடர்பு</h5>
+          <div class="f-contact-item"><i class="fas fa-phone"></i>+91 83447 99050</div>
+          <div class="f-contact-item"><i class="fas fa-envelope"></i>tp.agency@gmail.com</div>
+          <div class="f-contact-item"><i class="fas fa-location-dot"></i><span data-ta="திருப்பூண்டி, நாகப்பட்டினம் - 611103" data-en="Thirupoondi, Nagapattinam, Tamil Nadu - 611103">திருப்பூண்டி, நாகப்பட்டினம் - 611103</span></div>
+          <div class="f-contact-item"><i class="fas fa-clock"></i><span data-ta="கா.6 – மா.8 (திங்கள்–சனி)" data-en="6AM – 8PM (Mon–Sat)">கா.6 – மா.8 (திங்கள்–சனி)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="footer-bottom">
+      <p data-ta="© 2025 TP Poultry and Feeds. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை." data-en="© 2025 TP Poultry and Feeds. All rights reserved.">© 2025 TP Poultry and Feeds. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+      <div style="display:flex;gap:20px">
+        <a href="#" data-ta="தனியுரிமை" data-en="Privacy">தனியுரிமை</a>
+        <a href="#contact" data-ta="தொடர்பு" data-en="Contact">தொடர்பு</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ====================================================
+     FLOATING WHATSAPP
+==================================================== -->
+<a class="wa-fab"
+   href="https://wa.me/919876543210?text=Hello%20I%20want%20to%20order%20from%20TP%20Poultry%20and%20Feeds"
+   target="_blank" rel="noopener" aria-label="WhatsApp Order">
+  <div class="wa-fab-ring"></div>
+  <i class="fab fa-whatsapp"></i>
+  <div class="wa-fab-tip" data-ta="ஆர்டர் செய்யுங்கள்" data-en="Order Now">ஆர்டர் செய்யுங்கள்</div>
+</a>
+
+<button class="btt" id="bttBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- ====================================================
+     JAVASCRIPT
+==================================================== -->
+<script>
+/* ── STATE ─────────────────────────────────── */
+let lang = 'ta';
+let testiIdx = 0;
+let testiPerView = 3;
+let testiTotal = 0;
+let countersDone = false;
+
+/* ── INIT ───────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  initTicker();
+  initScrollReveal();
+  initNavbar();
+  initTestimonials();
+  initCounters();
+  initBackToTop();
+  initSmoothScroll();
+  applyLang('ta');
+});
+
+/* ── TICKER ─────────────────────────────────── */
+function initTicker() {
+  const track = document.getElementById('tickerTrack');
+  if (!track) return;
+  // Duplicate for seamless loop
+  track.innerHTML += track.innerHTML;
+}
+
+/* ── LANGUAGE ───────────────────────────────── */
+function toggleLang() {
+  lang = lang === 'ta' ? 'en' : 'ta';
+  document.getElementById('langLabel').textContent = lang === 'ta' ? 'EN' : 'தமிழ்';
+  applyLang(lang);
+}
+
+function applyLang(l) {
+  document.querySelectorAll('[data-ta][data-en]').forEach(el => {
+    if (el.children.length === 0) {
+      const val = el.getAttribute('data-' + l);
+      if (val !== null) el.innerHTML = val;
+    }
+  });
+  document.querySelectorAll('[data-ta-ph][data-en-ph]').forEach(el => {
+    el.placeholder = el.getAttribute('data-' + l + '-ph') || '';
+  });
+  document.querySelectorAll('select option[data-ta]').forEach(opt => {
+    const v = opt.getAttribute('data-' + l);
+    if (v) opt.textContent = v;
+  });
+  document.body.style.transition = 'opacity .18s';
+  document.body.style.opacity = '.85';
+  setTimeout(() => document.body.style.opacity = '1', 200);
+}
+
+/* ── NAVBAR ─────────────────────────────────── */
+function initNavbar() {
+  const nav = document.getElementById('navbar');
+  const onScroll = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 20 && y <= window.innerHeight * .9);
+    nav.classList.toggle('light', y > window.innerHeight * .9);
+    document.getElementById('bttBtn').classList.toggle('show', y > 500);
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+}
+
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const btn  = document.getElementById('hamBtn');
+  menu.classList.toggle('open');
+  btn.classList.toggle('active');
+}
+function closeMobileMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamBtn').classList.remove('active');
+}
+
+/* ── SCROLL REVEAL ──────────────────────────── */
+function initScrollReveal() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('up');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.sr').forEach(el => obs.observe(el));
+}
+
+/* ── SMOOTH SCROLL ──────────────────────────── */
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (!id || id === '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      window.scrollTo({top: target.offsetTop - 72, behavior:'smooth'});
+    });
+  });
+}
+
+/* ── COUNTER ANIMATION ──────────────────────── */
+function initCounters() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.dataset.done) {
+        animateCounter(entry.target);
+        entry.target.dataset.done = '1';
+      }
+    });
+  }, {threshold:.5});
+  document.querySelectorAll('.counter').forEach(el => obs.observe(el));
+}
+
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const dur = 1800;
+  const start = performance.now();
+  const tick = (now) => {
+    const p = Math.min((now - start) / dur, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.floor(ease * target);
+    if (p < 1) requestAnimationFrame(tick);
+    else el.textContent = target;
+  };
+  requestAnimationFrame(tick);
+}
+
+/* ── TESTIMONIALS SLIDER ────────────────────── */
+function initTestimonials() {
+  const cards = document.querySelectorAll('.testi-card');
+  testiTotal = cards.length;
+
+  function getPerView() {
+    return window.innerWidth < 768 ? 1 : window.innerWidth < 1100 ? 2 : 3;
+  }
+
+  function buildDots() {
+    const dotsEl = document.getElementById('testiDots');
+    const groups = Math.ceil(testiTotal / getPerView());
+    dotsEl.innerHTML = '';
+    for (let i = 0; i < groups; i++) {
+      const d = document.createElement('div');
+      d.className = 'testi-dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => goToTesti(i);
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function goToTesti(idx) {
+    testiPerView = getPerView();
+    const maxIdx = Math.ceil(testiTotal / testiPerView) - 1;
+    testiIdx = Math.max(0, Math.min(idx, maxIdx));
+    const track = document.getElementById('testiTrack');
+    const cardW = track.querySelector('.testi-card').offsetWidth;
+    const gap = 24;
+    track.style.transform = `translateX(-${testiIdx * (cardW + gap) * testiPerView}px)`;
+    document.querySelectorAll('.testi-dot').forEach((d,i) => d.classList.toggle('active', i === testiIdx));
+  }
+
+  buildDots();
+  window.addEventListener('resize', () => { buildDots(); goToTesti(testiIdx); }, {passive:true});
+
+  window.testiPrev = () => goToTesti(testiIdx - 1);
+  window.testiNext = () => goToTesti(testiIdx + 1);
+
+  // Auto-advance
+  setInterval(() => {
+    const maxIdx = Math.ceil(testiTotal / getPerView()) - 1;
+    goToTesti(testiIdx >= maxIdx ? 0 : testiIdx + 1);
+  }, 6000);
+}
+
+/* ── BACK TO TOP ────────────────────────────── */
+function initBackToTop() {
+  // handled inline via class toggle in initNavbar
+}
+
+/* ── FORM SUBMIT ────────────────────────────── */
+function handleSubmit(e) {
+  e.preventDefault();
+  const name    = document.getElementById('f-name').value.trim();
+  const phone   = document.getElementById('f-phone').value.trim();
+  const product = document.getElementById('f-product').value;
+  const msg     = document.getElementById('f-msg').value.trim();
+  if (!name || !phone) return;
+
+  let text = `Hello, I want to order from TP Poultry and Feeds.%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}`;
+  if (product) text += `%0AProduct: ${encodeURIComponent(product)}`;
+  if (msg)     text += `%0AMessage: ${encodeURIComponent(msg)}`;
+
+  window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+
+  const s = document.getElementById('formSuccess');
+  s.classList.add('show');
+  setTimeout(() => s.classList.remove('show'), 6000);
+  e.target.reset();
+}
+
+/* ── ACTIVE NAV HIGHLIGHT ───────────────────── */
+(function() {
+  const sections = document.querySelectorAll('section[id],footer');
+  const links    = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+    links.forEach(a => {
+      const match = a.getAttribute('href') === '#' + cur;
+      a.style.fontWeight = match ? '700' : '500';
+    });
+  }, {passive:true});
+})();
+</script>
+</body>
+</html>
